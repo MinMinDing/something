@@ -1,15 +1,22 @@
 {
  "outbound": {
   "streamSettings": {
-   "network": "ws", 
-   "kcpSettings": null, 
-   "wsSettings": {
-    "headers": {
-     "host": "ssr.pfcraft.cn"
+   "network": "kcp", 
+   "kcpSettings": {
+    "uplinkCapacity": 100, 
+    "downlinkCapacity": 100, 
+    "readBufferSize": 2, 
+    "mtu": 1350, 
+    "header": {
+     "type": "wechat-video", 
+     "request": null, 
+     "response": null
     }, 
-    "connectionReuse": true, 
-    "path": ""
+    "tti": 50, 
+    "congestion": false, 
+    "writeBufferSize": 2
    }, 
+   "wsSettings": null, 
    "tcpSettings": null, 
    "tlsSettings": {}, 
    "security": "tls"
@@ -26,11 +33,11 @@
       {
        "alterId": 100, 
        "security": "none", 
-       "id": "71da718e-2e6e-11e8-8123-aaaa000cff2f"
+       "id": "5a02e7d5-d646-4302-861d-0c6e732a2d66"
       }
      ], 
      "port": 1234, 
-     "address": "ssr.pfcraft.cn"
+     "address": "v2ray.pfcraft.cn"
     }
    ]
   }
